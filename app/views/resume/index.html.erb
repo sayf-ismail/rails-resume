@@ -1,0 +1,64 @@
+<h1>Resume for Sayf Ismail</h1>
+<hr>
+
+
+
+<%# Experience Section %>
+<h3>
+  <%= @experience_header %>
+</h3>
+
+<table>
+  <thead>
+  </thead>
+  <tbody>
+    <% @experience_content.each do |element|%>
+    <tr>
+      <th><%= element.start_date.to_s + " to " + element.end_date.to_s %></th>
+      <th><%= element.org_name %></th>
+    </tr>
+    <tr>
+      <th colspan="2"><%= element.skill_or_role_name %></th>
+    </tr>
+    <tr>
+      <th colspan="2" class="description"><%= element.description %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<hr>
+
+<%# Education Section %>
+<h3><%= @education_header %></h3>
+<table>
+  <thead>
+  </thead>
+  <tbody>
+    <% @education_content.each do |element|%>
+    <tr>
+      <th><%= element.org_name %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<hr>
+
+<%# Education Section %>
+<h3><%= @skills_header %></h3>
+
+<table>
+  <thead>
+  </thead>
+  <tbody>
+    <% @skills_content.each do |element|%>
+    <tr>
+      <th><%= element.description %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+

@@ -11,12 +11,27 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <style>
-      h3 {
-        border: 1px solid;
+      body {
+        margin-bottom: 30px;
       }
 
       .desciption {
         border: 1px solid;
+      }
+
+      th, td {
+        padding: 10px;
+      }
+
+      table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        border: 3px solid black;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: #d3d3d3;
       }
     </style>
   </head>

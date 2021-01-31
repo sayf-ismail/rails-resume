@@ -1,24 +1,13 @@
-# README
+# Rails Resume
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The task was to create a Resume that includes the Education, Experience and Skills sections.
 
-Things you may want to cover:
+##### Assumptions
+* The resume is for a single User;
+* The attributes for each section are: `skill_or_role_name` / `org_name` / `start_date` / `end_date` / `description`;
+* This template of attributes encompasses all sections;
+* The associations are: `one to many` between Resume and Sections.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##### Challenges
+* Working with `Datetime` I still need to format it, perhaps using `.strftime()`.
+* A migration was needed to add `section_name` to the Resume model.
